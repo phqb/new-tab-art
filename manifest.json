@@ -1,0 +1,15 @@
+{
+    "author": "phqb",
+    "homepage_url": "https://github.com/phqb/new-tab-art",
+    "description": "Replace your new tab with a randomized image from r/Moescape",
+    "manifest_version": 2,
+    "name": "New Tab Art",
+    "version": "0.1",
+    "permissions": ["topSites", "storage", "chrome://favicon/"],
+    "chrome_url_overrides": {
+        "newtab": "new-tab.html"
+    },
+    "background": {
+        "scripts": ["js/background.js"]
+    }
+}

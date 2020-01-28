@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'Playfair Display';
+    src: url(../fonts/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden
+}
+
+.container {
+    width: 100%;
+    height: 100vh
+}
+
+.container__image-container {
+    width: 100%;
+    height: 100%
+}
+
+.container__image-container__image-background {
+    background-color: #000;
+    filter: blur(8px);
+    width: calc(100% + 32px);
+    height: calc(100% + 32px);
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    overflow: hidden
+}
+
+.container__image-container__image {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.container__image-container__image__loading-icon-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    box-sizing: border-box
+}
+
+.container__image-container__image__loading-icon-container__icon {
+    color: #d3d3d3;
+    animation: spin 2s linear infinite
+}
+
+.container__description-container {
+    font-family: 'Playfair Display', serif;
+    /* z-index: 2; */
+    transition: opacity .2s;
+    padding: 32px 12px 12px;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background: linear-gradient(to top, rgba(0, 0, 0, .3) 60%, transparent)
+}
+
+.container__description-container__reset-button {
+    display: flex;
+    justify-content: center;
+    flex-grow: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .15);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 24px;
+    height: 24px
+}
+
+.container__description-container__reset-button__icon {
+    color: #ffff;
+}
+
+.container__description-container__text-container {
+    flex-grow: 1;
+    align-items: flex-start;
+    margin-left: 12px
+}
+
+.container__description-container__text-container__title-container {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center
+}
+
+.container__description-container__text-container__title-container__title {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    flex-grow: 0
+}
+
+.container__description-container__text-container__title-container__download-button {
+    background: rgba(255, 255, 255, .15);
+    color: #fff;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+    width: 24px;
+    height: 24px;
+    flex-grow: 0;
+    border-radius: 50%;
+    margin-left: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.container__description-container__text-container__source {
+    margin-bottom: 8px
+}
+
+.container__description-container__text-container__source a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #d3d3d3
+}
+
+.container__description-container__text-container__author a {
+    text-decoration: none;
+    color: #d3d3d3;
+    font-size: 12px
+}
+
+.container__tabs-button, .container__settings-button {
+    z-index: 3;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .15);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+}
+
+.container__tabs-button__icon, .container__settings-button__icon {
+    color: #ffff;
+    font-size: 24px;
+}
+
+.container__settings-button {
+    top: 12px;
+}
+
+.topsites {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.topsite {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    margin: 16px;
+    width: 200px;
+    display: flex;
+}
+
+.topsite:hover > .topsite__favicon {
+    box-shadow: 0 0px 16px rgba(0, 0, 0, .25);
+}
+
+.topsite__favicon {
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .15);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    transition: box-shadow .2s;
+    color: gray;
+    flex-shrink: 0;
+}
+
+.topsite__favicon > img {
+    widows: 16px;
+    height: 16px;
+}
+
+.topsite__title {
+    font-size: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
